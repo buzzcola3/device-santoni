@@ -80,6 +80,9 @@
 # DT2W
 /sys/android_touch/doubletap2wake                                     u:object_r:sysfs_dt2w:s0
 
+# Dolby
+/(vendor|system/vendor)/bin/hw/vendor\.dolby\.hardware\.dms@1\.0-service                     u:object_r:hal_dms_default_exec:s0
+
 # USB force fastcharge
 /sys/kernel/fast_charge/force_fast_charge                                     u:object_r:sysfs_fcharge:s0
 

@@ -75,7 +75,7 @@ if len(sys.argv) == 2 and sys.argv[1] == '-c':
 else:
   update()
 
-with open('proprietary-files-qc.txt', 'w') as file:
+with open('proprietary-files-qc-caf.txt', 'w') as file:
   for line in lines:
     file.write(line)
 

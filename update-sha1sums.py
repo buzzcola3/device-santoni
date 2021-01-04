@@ -22,7 +22,7 @@ import sys
 device='santoni'
 vendor='xiaomi'
 
-lines = [ line for line in open('proprietary-files-qc.txt', 'r') ]
+lines = [ line for line in open('proprietary-files-qc-caf.txt', 'r') ]
 vendorPath = '../../../vendor/' + vendor + '/' + device + '/proprietary'
 needSHA1 = False
 

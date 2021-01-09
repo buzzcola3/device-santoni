@@ -228,8 +228,6 @@ PRODUCT_PACKAGES += \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
 
-PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
-
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.0-impl:64 \
@@ -424,9 +422,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Recovery Override
-PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
@@ -434,10 +429,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
-
-#vendor prop to disable advanced network scanning
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.enableadvancedscan=false
 
 # Telephony
 PRODUCT_PACKAGES += \

@@ -83,6 +83,9 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml  \
     frameworks/native/data/etc/android.software.vulkan.deqp.level-2020-03-01.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.vulkan.deqp.level.xml
 
+# Device Properties
+-include $(LOCAL_PATH)/vendor_prop.mk
+
 # Additional native libraries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
@@ -227,8 +230,6 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     android.hardware.memtrack@1.0-impl \
     android.hardware.memtrack@1.0-service
-
-PRODUCT_PROPERTY_OVERRIDES += debug.hwui.use_buffer_age=false
 
 # DRM
 PRODUCT_PACKAGES += \
@@ -424,9 +425,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
 
-# Recovery Override
-PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
-
 # RIL
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
@@ -434,10 +432,6 @@ PRODUCT_PACKAGES += \
     librmnetctl \
     libprotobuf-cpp-full-vendorcompat \
     libprotobuf-cpp-lite-vendorcompat
-
-#vendor prop to disable advanced network scanning
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.vendor.radio.enableadvancedscan=false
 
 # Telephony
 PRODUCT_PACKAGES += \

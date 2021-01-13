@@ -96,16 +96,7 @@ persist.debug.coresight.config=stm-events
 
 # Dalvik
 PRODUCT_PROPERTY_OVERRIDES += \
-dalvik.vm.dex2oat-filter=speed \
-dalvik.vm.image-dex2oat-filter=speed \
-dalvik.vm.image-dex2oat-threads=4 \
-dalvik.vm.dex2oat64.enabled=true \
-dalvik.vm.heaptargetutilization=0.75 \
-dalvik.vm.heapgrowthlimit=256m \
-dalvik.vm.heapstartsize=8m \
-dalvik.vm.heapsize=512m \
-dalvik.vm.heapminfree=512k \
-dalvik.vm.heapmaxfree=8m
+dalvik.vm.dex2oat64.enabled=true
 
 # Display
 PRODUCT_PROPERTY_OVERRIDES += \

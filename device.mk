@@ -544,7 +544,9 @@ PRODUCT_PACKAGES += \
 
 # Prebuilts
 PRODUCT_PACKAGES += \
-    RemovePackages
+    RemovePackages \
+    crDroidMusic \
+    OPScreenRecorder
 
 # Reduce system image size by limiting java debug info.
 PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true

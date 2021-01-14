@@ -195,6 +195,10 @@ ro.vendor.qti.sys.fw.trim_empty_percent=100 \
 ro.vendor.qti.sys.fw.trim_cache_percent=100 \
 ro.vendor.qti.sys.fw.trim_enable_memory=2147483648
 
+# Privapp-permissions whitelisting
+PRODUCT_PROPERTY_OVERRIDES += \
+ro.control_privapp_permissions=enforce
+
 # Netmgrd
 PRODUCT_PROPERTY_OVERRIDES += \
 ro.vendor.use_data_netmgrd=true \

@@ -1,11 +1,7 @@
-allow iorap_inode2filename app_data_file:lnk_file read;
-
 allow iorap_inode2filename {
   vendor_overlay_file
   media_rw_data_file
   bluetooth_logs_data_file
-  credstore_data_file
-  keystore_data_file
   apk_private_data_file
   asec_image_file
   tombstone_data_file
@@ -14,9 +10,7 @@ allow iorap_inode2filename {
   cache_file
   adb_data_file
   adbroot_data_file
-  gsi_data_file
   shell_data_file
-  keystore_data_file
   profman_dump_data_file
   install_data_file
   apex_module_data_file

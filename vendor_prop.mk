@@ -54,6 +54,10 @@ persist.bluetooth.a2dp_offload.disabled=true \
 persist.vendor.bluetooth.modem_nv_support=true \
 vendor.qcom.bluetooth.soc=smd
 
+# Blur
+PRODUCT_PROPERTY_OVERRIDES += \
+persist.sys.sf.disable_blurs=1
+
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
 sys.vendor.shutdown.waittime=500
@@ -251,15 +255,6 @@ persist.vendor.ims.disableQXDMLogs=1
 # Recovery
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.recovery_update=false
-
-# SurfaceFlinger
-PRODUCT_PROPERTY_OVERRIDES += \
-debug.sf.early_phase_offset_ns=11600000 \
-debug.sf.early_app_phase_offset_ns=11600000 \
-debug.sf.early_gl_phase_offset_ns=3000000 \
-debug.sf.early_gl_app_phase_offset_ns=15000000 \
-debug.sf.phase_offset_threshold_for_next_vsync_ns=11600000 \
-persist.sys.sf.disable_blurs=1
 
 # Time Servicess
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -56,8 +56,7 @@ vendor.qcom.bluetooth.soc=smd
 
 # Boot
 PRODUCT_PROPERTY_OVERRIDES += \
-sys.vendor.shutdown.waittime=500 \
-ro.build.shutdown_timeout=0
+sys.vendor.shutdown.waittime=500
 
 # Camera
 PRODUCT_PROPERTY_OVERRIDES += \

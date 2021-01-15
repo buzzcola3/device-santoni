@@ -12,9 +12,7 @@ allow iorap_inode2filename {
 }:dir { read getattr };
 
 allow iorap_inode2filename {
-  hal_allocator_default_exec
   system_suspend_exec
   statsd_exec
   profman_exec
-  adbd_exec
 }:file { getattr };

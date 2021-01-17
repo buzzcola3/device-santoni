@@ -470,10 +470,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
-# Shims
-PRODUCT_PACKAGES += \
-    libcamshim
-
 # Signapk
 PRODUCT_HOST_PACKAGES += \
     signapk
@@ -504,8 +500,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-ext \
-    libstdc++.vendor
+    vndk-sp
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so

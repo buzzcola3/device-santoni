@@ -194,9 +194,6 @@ include device/qcom/sepolicy-legacy-um/SEPolicy.mk
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(DEVICE_PATH)/sepolicy/private
 BOARD_VENDOR_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy/vendor
 
-# VNDK
-BOARD_VNDK_VERSION := current
-
 # Vendor Security patch level
 VENDOR_SECURITY_PATCH := 2020-12-05
 

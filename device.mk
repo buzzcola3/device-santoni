@@ -162,8 +162,7 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
+    libhwbinder
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -181,10 +180,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5:64 \
     android.hardware.camera.provider@2.6:64 \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
-    libdng_sdk.vendor \
-    libgui_vendor
+    vendor.qti.hardware.camera.device@1.0
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -213,7 +209,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
-    libdisplayconfig.qti.vendor \
+    libdisplayconfig.qti \
 	libvulkan \
     libqdMetaData.system \
     libqdMetaData \
@@ -245,8 +241,7 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.2 \
-    libbacktrace-vendor \
-    libunwind-vendor
+    libunwind
 
 # FM
 PRODUCT_PACKAGES += \
@@ -256,7 +251,6 @@ PRODUCT_PACKAGES += \
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti
 
 # Gatekeeper HAL
@@ -285,12 +279,13 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-service
 
 # HIDL
+PRODUCT_ENFORCE_VINTF_MANIFEST_OVERRIDE := true
+
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java \
-    libhidltransport \
-    libhidltransport.vendor
+    libhidltransport
 
 # HW crypto
 PRODUCT_PACKAGES += \
@@ -361,6 +356,12 @@ PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_video.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video.xml \
     frameworks/av/media/libstagefright/data/media_codecs_google_video_le.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_video_le.xml
 
+# Net
+PRODUCT_PACKAGES += \
+    android.system.net.netd@1.0 \
+    libandroid_net \
+    netutils-wrapper-1.0
+
 # OMX
 PRODUCT_PACKAGES += \
     libmm-omxcore \
@@ -430,11 +431,11 @@ PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
 
 # RIL
 PRODUCT_PACKAGES += \
+    android.hardware.radio@1.2 \
+    android.hardware.radio.config@1.0 \
     android.hardware.secure_element@1.0 \
     libcnefeatureconfig \
-    librmnetctl \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    librmnetctl
 
 #vendor prop to disable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -470,10 +471,6 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-service \
     libsensorndkbridge
 
-# Shims
-PRODUCT_PACKAGES += \
-    libcamshim
-
 # Signapk
 PRODUCT_HOST_PACKAGES += \
     signapk
@@ -504,8 +501,7 @@ PRODUCT_PACKAGES += \
 
 # VNDK
 PRODUCT_PACKAGES += \
-    vndk-ext \
-    libstdc++.vendor
+    vndk-sp
 
 PRODUCT_COPY_FILES += \
     prebuilts/vndk/v29/arm64/arch-arm64-armv8-a/shared/vndk-sp/libbinderthreadstate.so:$(TARGET_COPY_OUT_VENDOR)/lib64/libbinderthreadstate.so

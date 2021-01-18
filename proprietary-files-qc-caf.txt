@@ -503,6 +503,12 @@ vendor/etc/init/vendor.qti.hardware.alarm@1.0-service.rc|a03a9a1c818595b19272ea6
 vendor/lib64/hw/vendor.qti.hardware.alarm@1.0-impl.so|0119fa4d87505bc5d9426ec8ffe56d9dd3bc9e4f
 vendor/lib64/vendor.qti.hardware.alarm@1.0.so|57d936014f89811481712ac7a08d104b85b636b5
 
+# Protobuf - from LA.UM.9.6.2.r1-03600-89xx.0
+vendor/lib/libprotobuf-cpp-full-3.9.1.so|77113788522e3b31bb0de2ed2d55f0e3b23137c8
+vendor/lib/libprotobuf-cpp-lite-3.9.1.so|8a30d425f172aeafb1d18dd9f002fdcc4370888b
+vendor/lib64/libprotobuf-cpp-full-3.9.1.so|521fd2f75afe8adfff00cb3ce8e3c39e60fd7bee
+vendor/lib64/libprotobuf-cpp-lite-3.9.1.so|9daa7d0c70314917c1563941baed85cfc93e9ba4
+
 # QMI - from LA.UM.9.6.2.r1-03600-89xx.0
 vendor/lib/libpdmapper.so|c8f48eeef2bcdabec913395fd698f29aa39ad18f
 vendor/lib/libqcci_legacy.so|39e27fbf8b3ed8f668ea701ac58a5d0a39513bb8

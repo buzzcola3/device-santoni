@@ -361,7 +361,7 @@ service irsc_util /vendor/bin/irsc_util "/vendor/etc/sec_config"
     user root
     oneshot
 
-service vendor.atfwd /vendor/bin/ATFWD-daemon
+service vendor.atfwd /system/vendor/bin/ATFWD-daemon
     class late_start
     user system
     group system radio
@@ -374,37 +374,37 @@ on property:vendor.hw.fm.init=0
 on property:vendor.hw.fm.init=1
     write /sys/module/radio_iris_transport/parameters/fmsmd_set 1
 
-service vendor.sensors.qti /vendor/bin/sensors.qti
+service vendor.sensors.qti /system/vendor/bin/sensors.qti
     class core
     user system
     group system
     writepid /dev/cpuset/system-background/tasks
 
-service loc_launcher /vendor/bin/loc_launcher
+service loc_launcher /system/vendor/bin/loc_launcher
     class late_start
     user gps
     group gps
     writepid /dev/cpuset/system-background/tasks
 
-service qcom-sh /vendor/bin/init.qcom.sh
+service qcom-sh /system/vendor/bin/init.qcom.sh
     class late_start
     user root
     group root system radio
     oneshot
 
-service vendor-sensor-sh /vendor/bin/init.qcom.sensors.sh
+service vendor-sensor-sh /system/vendor/bin/init.qcom.sensors.sh
     class core
     user root
     oneshot
 
-service vendor.qcom-post-boot /vendor/bin/init.qcom.post_boot.sh
+service vendor.qcom-post-boot /system/vendor/bin/init.qcom.post_boot.sh
     class late_start
     user root
     group root system wakelock graphics
     disabled
     oneshot
 
-service baseband-sh /vendor/bin/init.baseband.sh
+service baseband-sh /system/vendor/bin/init.baseband.sh
     class late_start
     user root
     oneshot
@@ -423,7 +423,7 @@ service battery_monitor /system/bin/battery_monitor
     group system
     disabled
 
-service ril-daemon2 /vendor/bin/hw/rild -c 2
+service ril-daemon2 /system/vendor/bin/hw/rild -c 2
     class main
     user radio
     group radio cache inet misc audio sdcard_r sdcard_rw diag oem_2901 log
@@ -435,18 +435,18 @@ service profiler_daemon /system/bin/profiler_daemon
     group root
     disabled
 
-service vendor.charger /vendor/bin/charger
+service vendor.charger /system/vendor/bin/charger
     class charger
     group system graphics log
     seclabel u:r:vendor_charger:s0
 
-service vendor.msm_irqbalance /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance.conf
+service vendor.msm_irqbalance /system/vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance.conf
     class core
     user root
     group root
     disabled
 
-service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqbalance_little_big.conf
+service vendor.msm_irqbal_lb /system/vendor/bin/msm_irqbalance -f /system/vendor/etc/msm_irqbalance_little_big.conf
     class core
     user root
     group root
@@ -455,7 +455,7 @@ service vendor.msm_irqbal_lb /vendor/bin/msm_irqbalance -f /vendor/etc/msm_irqba
 on charger
     start vendor.qcom-post-boot
 
-service vendor.power_off_alarm /vendor/bin/power_off_alarm
+service vendor.power_off_alarm /system/vendor/bin/power_off_alarm
     class core
     group system
     disabled
@@ -481,7 +481,7 @@ service vendor.audio-hal /vendor/bin/hw/android.hardware.audio.service
     writepid /dev/cpuset/foreground/tasks /dev/stune/foreground/tasks
     onrestart restart audioserver
 
-service goodix_script /vendor/bin/init.goodix.sh
+service goodix_script /system/vendor/bin/init.goodix.sh
     class late_start
     user system
     oneshot

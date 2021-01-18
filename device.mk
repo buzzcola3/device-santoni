@@ -162,8 +162,7 @@ PRODUCT_PACKAGES += \
 
 # Binder
 PRODUCT_PACKAGES += \
-    libhwbinder \
-    libhwbinder.vendor
+    libhwbinder
 
 # Camera
 PRODUCT_PACKAGES += \
@@ -181,10 +180,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.5:64 \
     android.hardware.camera.provider@2.6:64 \
-    vendor.qti.hardware.camera.device@1.0 \
-    vendor.qti.hardware.camera.device@1.0_vendor \
-    libdng_sdk.vendor \
-    libgui_vendor
+    vendor.qti.hardware.camera.device@1.0
 
 # Component overrides
 PRODUCT_COPY_FILES += \
@@ -213,7 +209,7 @@ PRODUCT_PACKAGES += \
     hwcomposer.msm8937 \
     memtrack.msm8937 \
     libdisplayconfig \
-    libdisplayconfig.qti.vendor \
+    libdisplayconfig.qti \
 	libvulkan \
     libqdMetaData.system \
     libqdMetaData \
@@ -245,8 +241,8 @@ PRODUCT_PACKAGES += \
 # Fingerprint
 PRODUCT_PACKAGES += \
     android.hardware.biometrics.fingerprint@2.2 \
-    libbacktrace-vendor \
-    libunwind-vendor
+    libbacktrace \
+    libunwind
 
 # FM
 PRODUCT_PACKAGES += \
@@ -256,7 +252,6 @@ PRODUCT_PACKAGES += \
 # fwk-detect
 PRODUCT_PACKAGES += \
     libqti_vndfwk_detect \
-    libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti
 
 # Gatekeeper HAL
@@ -291,8 +286,7 @@ PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.manager@1.0 \
     android.hidl.manager@1.0-java \
-    libhidltransport \
-    libhidltransport.vendor
+    libhidltransport
 
 # HW crypto
 PRODUCT_PACKAGES += \
@@ -440,9 +434,7 @@ PRODUCT_PROPERTY_OVERRIDES += persist.vendor.recovery_update=false
 PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.0 \
     libcnefeatureconfig \
-    librmnetctl \
-    libprotobuf-cpp-full-vendorcompat \
-    libprotobuf-cpp-lite-vendorcompat
+    librmnetctl
 
 #vendor prop to disable advanced network scanning
 PRODUCT_PROPERTY_OVERRIDES += \

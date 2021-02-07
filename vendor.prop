@@ -15,6 +15,7 @@ persist.vendor.audio.fluence.voicerec=true
 persist.vendor.audio.fluence.speaker=true
 persist.vendor.audio.speaker.prot.enable=false
 persist.vendor.bt.enable.splita2dp=false
+persist.vendor.audio.hw.binder.size_kbyte=1024
 ro.vendor.audio.sdk.ssr=false
 vendor.audio.flac.sw.decoder.24bit=true
 vendor.audio.hw.aac.encoder=true
